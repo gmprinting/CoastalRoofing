@@ -415,4 +415,52 @@ footer .footer-content {
     text-align: center !important;
   }
 }
+/* HERO: logo only (no overlay text) */
+.hero h1,
+.hero p,
+.hero .btn,
+.hero .hero-text,
+.hero .hero-content p,
+.hero .hero-content a {
+  display: none !important;
+}
+
+/* New intro section (shows AFTER you scroll past hero) */
+.intro{
+  padding: 36px 18px;
+  text-align: center;
+}
+
+.intro-text{
+  max-width: 900px;
+  margin: 0 auto 18px auto;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.intro-btn{
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Mobile sizing */
+@media (max-width: 768px){
+  .intro{
+    padding: 28px 16px;
+  }
+  .intro-text{
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .intro-btn{
+    display: block;
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 
