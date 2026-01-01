@@ -352,4 +352,21 @@ footer .footer-content {
     .card-gallery img {
         max-width: 45%;
     }
+}/* REMOVE "Built for the Coast, Built to Last" headline */
+.hero h1,
+.hero-title,
+.tagline,
+.hero-content h1 {
+  display: none !important;
 }
+/* Adjust hero spacing after headline removal */
+.hero-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.hero-logo {
+  margin-bottom: 20px;
+}
+
