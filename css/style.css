@@ -369,4 +369,50 @@ footer .footer-content {
 .hero-logo {
   margin-bottom: 20px;
 }
+/* MOBILE FIX: ensure hero shows correctly on phones */
+@media (max-width: 768px) {
+
+  /* Make sure hero and its content are visible */
+  .hero, .hero-section, header.hero,
+  .hero-content, .hero-inner, .hero .container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Prevent clipping */
+  .hero, .hero-section, header.hero {
+    height: auto !important;
+    min-height: 70vh !important;
+    overflow: visible !important;
+    padding-top: 90px !important; /* clears the top nav */
+    padding-bottom: 30px !important;
+  }
+
+  /* Center the logo nicely */
+  .hero img, .hero-logo, .logo img {
+    display: block !important;
+    margin: 0 auto 18px auto !important;
+    max-width: 240px !important;
+    height: auto !important;
+  }
+
+  /* Make the paragraph readable on mobile */
+  .hero p, .hero-subtitle {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 12px auto 0 auto !important;
+    max-width: 92% !important;
+  }
+
+  /* Make the button full and tappable */
+  .hero a, .hero .btn, .hero button, .cta-btn {
+    display: block !important;
+    width: 90% !important;
+    max-width: 360px !important;
+    margin: 18px auto 0 auto !important;
+    text-align: center !important;
+  }
+}
 
