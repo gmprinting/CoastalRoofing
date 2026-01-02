@@ -61,13 +61,6 @@ nav a:hover {
   padding: 60px 20px;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
 .hero-content {
   position: relative;
   max-width: 900px;
