@@ -246,3 +246,68 @@ footer{
     font-size: 1.6rem;
   }
 }
+/* ===============================
+   MOBILE FIX: no overlap, tabs + logo stacked
+================================ */
+@media (max-width: 768px){
+
+  /* 1) Stop header from covering the page */
+  header{
+    position: relative !important;  /* key: no more overlay */
+    height: auto !important;
+    padding: 10px 12px !important;
+  }
+
+  /* If you previously had body padding-top for a fixed header, remove it on mobile */
+  body{
+    padding-top: 0 !important;
+  }
+
+  /* 2) Stack nav first, then logo under it */
+  header .container,
+  header .nav-container{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  /* NAV (tabs) */
+  nav{
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;          /* wraps instead of smashing */
+    justify-content: center !important;
+    gap: 10px 14px !important;
+    order: 1 !important;
+  }
+
+  nav a{
+    padding: 8px 10px !important;
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* LOGO under tabs */
+  header img,
+  header .logo img{
+    order: 2 !important;
+    height: 58px !important;
+    width: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* 3) Keep hero from jumping up under header area */
+  .hero{
+    min-height: 72vh !important;
+    padding: 18px 14px 52px !important;
+    background-position: center 72% !important; /* makes image feel bigger */
+  }
+
+  /* 4) Smaller hero text so it doesn't fight the image/logo */
+  .hero h1{ font-size: 1.75rem !important; }
+  .hero p{ font-size: 1rem !important; }
+}
