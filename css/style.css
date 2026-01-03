@@ -330,3 +330,10 @@ textarea{ min-height:120px; }
     color: #fff !important;
   }
 }
+/* Hide page title text on mobile hero */
+@media (max-width: 768px){
+  .hero h1,
+  .hero .page-title{
+    display: none !important;
+  }
+}
