@@ -311,3 +311,89 @@ footer{
   .hero h1{ font-size: 1.75rem !important; }
   .hero p{ font-size: 1rem !important; }
 }
+/* ===============================
+   FINAL PATCH: GOLD BUTTONS + HERO TUNE + MATERIALS (STATIC)
+   Paste at END of style.css
+================================ */
+
+:root{
+  --gold: #c9a23a;
+  --gold-dark: #b28d2f;
+}
+
+/* GOLD CTA BUTTONS */
+a.button,
+.hero a.button,
+.hero .button,
+button,
+.cta a{
+  display: inline-block !important;
+  background-color: var(--gold) !important;
+  color: #ffffff !important;
+  padding: 12px 22px !important;
+  border-radius: 8px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+a.button:hover,
+.hero a.button:hover,
+button:hover{
+  background-color: var(--gold-dark) !important;
+}
+
+/* HERO: small zoom + tighten spacing */
+.hero{
+  background-size: 112% auto !important;
+  background-position: center 70% !important;
+  padding-top: 14px !important;
+  padding-bottom: 40px !important;
+}
+
+.hero h1{
+  margin-top: 4px !important;
+  margin-bottom: 6px !important;
+}
+
+.hero p{
+  margin-bottom: 12px !important;
+}
+
+/* MATERIALS: static display gallery */
+.materials{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.materials h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.materials-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.materials-grid img{
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* STATIC = no click behavior */
+.materials-grid img{
+  pointer-events: none;
+}
+
+.materials-note{
+  margin-top: 24px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #444;
+}
