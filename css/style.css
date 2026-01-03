@@ -337,3 +337,10 @@ textarea{ min-height:120px; }
     display: none !important;
   }
 }
+/* MOBILE: shift hero image up so Coastal Roofing logo shows */
+@media (max-width: 768px){
+  .hero{
+    background-position: center 25% !important; /* move view upward */
+    min-height: 52vh !important;               /* give the logo more room */
+  }
+}
