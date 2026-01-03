@@ -290,3 +290,43 @@ textarea{ min-height:120px; }
   .grid-2{ grid-template-columns:1fr; }
   .footer-inner{ justify-content:center; text-align:center; }
 }
+/* ===============================
+   MOBILE FIX: stop hero text overlapping hero image
+   Hero image becomes a clean banner, content moves below
+================================ */
+@media (max-width: 768px){
+
+  /* Make hero a banner */
+  .hero{
+    min-height: 44vh !important;     /* banner height */
+    padding: 0 !important;
+    align-items: flex-end !important;
+    background-position: center 60% !important;
+  }
+
+  /* Move hero text/buttons into a white block BELOW the image */
+  .hero-content{
+    width: 100% !important;
+    max-width: none !important;
+    background: #ffffff !important;
+    color: #111 !important;
+    border-radius: 0 !important;
+    padding: 14px 16px !important;
+  }
+
+  .hero h1{
+    color: #111 !important;
+    margin-bottom: 6px !important;
+    font-size: 1.35rem !important;
+  }
+
+  .hero p{
+    color: #333 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Keep buttons gold and readable on white */
+  .hero .button{
+    color: #fff !important;
+  }
+}
