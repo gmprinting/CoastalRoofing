@@ -344,3 +344,17 @@ textarea{ min-height:120px; }
     min-height: 52vh !important;               /* give the logo more room */
   }
 }
+/* FINAL MOBILE HERO ALIGNMENT FIX */
+@media (max-width: 768px){
+
+  /* Move the hero image UP so logo is visible */
+  .hero{
+    background-position: center 12% !important; /* was too low */
+    min-height: 60vh !important;                /* give logo room */
+  }
+
+  /* Push the text box DOWN below the logo area */
+  .hero-content{
+    margin-top: 180px !important; /* key fix */
+  }
+}
